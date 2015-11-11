@@ -1,4 +1,5 @@
 \documentclass[a4paper, 10pt, notitlepage]{article}
+
 \usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage{amsmath}
@@ -6,10 +7,20 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{layaureo}
+\usepackage{wrapfig}
+\usepackage[font=footnotesize]{caption}
+\usepackage[font=footnotesize]{subcaption}
+\usepackage[style=numeric, sorting=none, backend=biber]{biblatex}
+
+\addbibresource{reference.bib}
+
 \author{G. Bertoli \and A. Shcherbakova \and E. Valdes \and O. Bylund}
-\title{Proportional Counter}
+\title{Readiness of the Proportional Counter of the Group~5 Collaboration}
 \date{2 November 2015}
+
 \graphicspath{{/home/drkg4b/work/detector_school/lab_reports/prop_counter/images/}}
+
+\newcommand{\ud}{\mathrm{d}}
 
 \begin{document}
 \maketitle
@@ -37,6 +48,8 @@
 \section{Conclustions}
 \label{sec:conclusions}
 \input{conclusions}
+
+\printbibliography
 \end{document}
 %%% Local Variables:
 %%% mode: latex
