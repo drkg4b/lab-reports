@@ -43,12 +43,49 @@ remark, sine the high energy electron avalanche interacts with many atoms, a
 variety of different atomic states is formed, thus proportional counters are
 sensitive to the gas composition used.
 
-\mbox{}
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=.5\linewidth]{regions_of_operation}
+  \caption{Pulse amplitude as a function of the applied voltage\autocite{Knoll:RadMeasurement}.}
+  \label{fig:reg_of_operation}
+\end{figure}
+The amplitude of the observed pulse as a function of the applied voltage is
+reported in Figure~\ref{fig:reg_of_operation}, for low values of the voltage,
+the field cannot prevent recombination thus the observed the collected charge is
+less what was produced by the incident radiation. If the voltage is increased to
+the point that the recombination rate becomes negligible, all the charges get
+collected by the respective electrode and increasing the voltage further will
+not increase the current, this regime is called \emph{ion saturation}. If the
+voltage is increased past the ion saturation region, gas multiplication
+processes described above will start to occur. This is the region of \emph{true
+  proportionality} and is the normal operation condition of proportional
+counters. In this region the gas multiplication is linear and the number of
+collected charge proportional to the number of ion pairs created by the incident
+radiation. Increasing the voltage further will introduce non linear effects
+which are beyond the scope of this report (see\autocite{Knoll:RadMeasurement}).
 
-Introduce here ion saturation and regions of operation that leads to gas
-multiplication.
-
-
+In cylindrical geometry the electric field at radius $r$ is given by:
+\begin{equation}
+  \label{eq:cyl_el_field}
+  E(r) = \frac{V}{r \ln (b / a)}
+\end{equation}
+where $V$ is the voltage applied between anode and cathode, $a$ is the radius of
+the anode wire and $b$ is the active volume radius. Gas multiplication require a
+high electric field thus a small anode wire, where $r$ is small, is preferable,
+Figure~\ref{fig:wire_el_field} gives a schematic representation of this.
+Moreover, in order to achieve a uniform multiplication for the ion pairs created
+by the incident radiation, gas multiplication must be confined to a very small
+volume around the anode wire so that all the ion pairs are created in the active
+volume outside the high field region and the electrons can drift towards the
+anode where they can achieve the same multiplication regardless of the original
+formation position.
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=.5\linewidth]{wire_el_field}
+  \caption{Electric field dependence on the distance from the anode wire. The
+    gas multiplication region is confined to a small volume\autocite{Knoll:RadMeasurement}.}
+  \label{fig:wire_el_field}
+\end{figure}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "prop_counter"
