@@ -86,7 +86,13 @@ def main():
 
     # print resolution(x_range, y_range)
 
+    plt.grid(True)
+
+    # plt.xlabel('MCA #')
+    # plt.ylabel('Counts')
+
     # plt.step(x_range, y_range, where='mid')
+    # plt.savefig('calibration_raw.pdf')
     # plt.show()
 
     # x_centroids = [66.79, 134.06, 198.92, 267.73, 333.49, 393.93]
@@ -102,8 +108,6 @@ def main():
 
     # plt.plot(x_centroids, y_charge, 'bs', label='Data points')
     # plt.plot(x_centroids, fit_gain100(x_centroids), 'g', label='Polinomial fit')
-
-    plt.grid(True)
 
     # plt.legend(loc=2)
     # plt.savefig('calibration.pdf')
@@ -141,17 +145,17 @@ def main():
     resolution_gain10 = [19./118, 23./140, 25./160, 29./177]
     charge_gain10 = [4.47706528*10, 5.27477431*10, 6.07248333*10, 6.71824778*10]
 
-    plt.plot(voltage_gain10, charge_gain10, 'bs', label='Gain 10')
-    plt.plot(voltage_gain20, charge_gain20, 'g^', label='Gain 20')
-    plt.plot(voltage_gain50, charge_gain50, 'ro', label='Gain 50')
-    plt.plot(voltage_gain100, charge_gain100, '*', label='Gain 100')
-    plt.plot(voltage_gain200, charge_gain200, 'yv', label='Gain 200')
+    # plt.plot(voltage_gain10, charge_gain10, 'bs', label='Gain 10')
+    # plt.plot(voltage_gain20, charge_gain20, 'g^', label='Gain 20')
+    # plt.plot(voltage_gain50, charge_gain50, 'ro', label='Gain 50')
+    # plt.plot(voltage_gain100, charge_gain100, '*', label='Gain 100')
+    # plt.plot(voltage_gain200, charge_gain200, 'yv', label='Gain 200')
 
-    plt.xlabel('Voltage [V]')
-    plt.ylabel('Collected charge [pC]')
+    # plt.xlabel('Voltage [V]')
+    # plt.ylabel('Collected charge [pC]')
 
-    plt.legend(loc=2)
-    plt.savefig('charge_vs_voltage.pdf')
+    # plt.legend(loc=2)
+    # plt.savefig('charge_vs_voltage.pdf')
 
     plt.plot(voltage_gain10, resolution_gain10, 'bs', label='Gain 10')
     plt.plot(voltage_gain20, resolution_gain20, 'g^', label='Gain 20')
