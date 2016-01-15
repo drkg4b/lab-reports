@@ -3,39 +3,33 @@
 The collected charge is calculated using \ref{eq:capacitance}, hence
 \begin{equation}
   \label{eq:uncertainties}
-  \delta Q = \sqrt{(\delta C)^2 + (\delta V)^2}.
+  \delta Q = \sqrt{(V \delta C)^2 + (C \delta V)^2}.
 \end{equation}
 The capacitance of the pre-amplifier was given in \autocite{LabInstruction}
 without uncertainty so, to be conservative, we will assume $\delta C =
 0.5$~pF. The high voltage power supply (HVPS) was used to adjust and read the
 input, the sensitivity of the instrument is $\pm$ 1~V, thus $\delta V = 1$~V.
 
-The relationship between the HV:
-\begin{equation}
-  U_{HV(U_{ref})} = \alpha U_{ref} + \beta
-\end{equation}
-from where we can get the error as:
-\begin{equation}
-  \delta U_{HV(U_{ref})} = \sqrt{ (\delta \alpha  U_{ref})^2 + (\delta \beta)^2 + (\alpha \delta U_{ref})^2 }
-\end{equation}
 The charge collected in the anode was obtained feeding the input of the
 preamplifier with a square pulse and measuring the MCA response.
 \begin{equation}
-  Q = C U_{pulse (N)}
+  Q = C V_{p}(n)
 \end{equation}
-Where Q is the charge collected, the C capacitance and N is the multichannel
-analyzer response that depends lineary on the gain chosen.
+Where Q is the charge collected, the C capacitance and n is the MCA response,
+the latter also depends linearly on the gain
 \begin{equation}
-  U_{pulse (N)}= C\alpha_G N_G + \beta_G
+  V_{p}(n_g) = \alpha_g n_g C + \beta_g
 \end{equation}
-Hence the error for Q would be:
+Hence the error on the collected charge is given by
 \begin{equation}
-  \delta Q = \sqrt{(\delta CU_p )^2 + (C \sqrt{(N\delta \alpha)^2+(\delta \beta)^2} )^2 + (C\alpha \delta N)^2}
+  \delta Q = \sqrt{(\delta C V_p )^2 + \left( C \sqrt{( n_g \delta \alpha_g)^2 +
+        (\delta \beta_g)^2} \right)^2 + (C \alpha \delta n_g)^2}.
 \end{equation}
-On the resolution side most errors treated and obtained from the Gaussian
+For the resolution, the errors are treated and obtained from the Gaussian
 distribution
 \begin{equation}
-  \delta R = \sqrt{(\frac{\delta \sigma,}{\sigma})^2 + (\frac{\delta \mu}{\mu})^2}
+  \delta R = \sqrt{\left( \frac{\delta \sigma}{\sigma} \right)^2 + \left(
+      \frac{\delta \mu}{\mu} \right)^2}.
 \end{equation}
 \begin{figure}[!h]
   \centering
