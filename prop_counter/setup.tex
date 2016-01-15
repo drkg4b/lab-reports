@@ -1,22 +1,20 @@
 \subsection{Building of the "PingaTube" detector}
 \label{sec:building_pingatube}
 
-
 \subsubsection{Materials for the PingaTube}
 \label{sec:materials_pingatube}
-
-In order to build the "PingaTube" detector the following parts were used:
+In order to build the PingaTube detector the following parts were used:
 \begin{itemize}
 \item a cathod consisting in a aluminium tube (l = 146.5 mm, d$_{inner}$ = 20.63
   mm, d$_{outer}$ = 22.9 mm, d$_{window}$ = 9.2 mm)
-\item an anode consisting in a Cu/Be wire as the anode (d = 0.025 mm)
-\item two brass tubes with the purpose of keeping uniformity on the electric
-  field around the anode (d = 1 mm, l$_{1}$ = 40.64 mm and l$_{1}$ = 42.72 mm)
+\item an anode consisting in a Cu/Be wire (d = 0.025 mm)
+\item two bras tubes to prevent gas multiplication at the end of the active
+  volume (d = 1 mm, l$_{1}$ = 40.64 mm and l$_{1}$ = 42.72 mm)
 \item insulating endcaps
-\item P10 gas Argon (90\%)/CH$_{4}$ (10\%)
-\item gas tubes in order to flux the gas (d = 2.1 mm)
-\item HV connector in order to supply high voltage to the anode
-\item a ground cable in order to connect the cathode.
+\item P-10 gas Argon (90\%)/CH$_{4}$ (10\%)
+\item gas tubes in order to convey the gas (d = 2.1 mm)
+\item High voltage (HV) connector in order to supply high voltage to the anode
+\item a ground cable in order to connect the cathode
 \item O-ring wire connector
 \item electric fastenning belt
 \item Ultrasound bath with 10/90 Isopropanol/Water
@@ -27,14 +25,22 @@ In order to build the "PingaTube" detector the following parts were used:
 
 \subsubsection{Design and Assembly}
 \label{sec:design_and_assembly_beercan}
-The design was intended for using the aluminium tube as a gas chamber. Most of
-the materials were provided and hence creatively assembling the detector was the
-main task.  Some pieces were cut by the instructors because of the lab sefety
-rules with the mechanical tools. Others such as the brass tubes were prepared by
-the students.  Using a lab microscope it was verified that no significant
-notches were present on the brass tubes, which was required for the best
-functionability possible.  For the assembly of the detector, the parts were
-cleaned in an ultrasonic bath of isopropanol/water mixture.
+The main target was to be able to design, build and use in a real data taking
+experiment a proportional counter detector using every day objects. Most of the
+materials were provided and hence creatively assembling the detector was the
+main task. Due to safety regulations some steps, mostly cutting and drilling,
+were handled by the instructors.
+
+The bras tubes were sanded at the extremities to avoid sparks that could damage
+the anode and, using a microscope, it was verified that no significant notches
+were present. Any residue of grease on any of the internal parts could cause
+dishomogeneities of the electric field and thus compromise the energy
+resolution. In order to prevent this, all the parts were cleaned in an
+ultrasonic bath of isopropanol/water mixture.
+
+The thickness of the cathode tube was enough to stop the radiation from the
+weaker source of Fe55 thus a small window, that was later covered with a thin
+aluminum foil, was opened approximately in the middle of it.
 
 The Cu/Be wire was soldered to the HV connector and glued to the end caps. In
 order to fix and seal the chamber the end caps were glued with a two component
@@ -148,7 +154,7 @@ Some failures:
 Figure~\ref{fig:exp_setup} shows a schematic view of the setup used for the
 calibration of the detector and data taking. The signal from the detector at
 first pass trough a pre-amplifier, this has a capacitance of 1~pF and is
-connected to a high voltage (HV) power supply so that the input voltage is
+connected to a high voltage power supply (HVPS) so that the input voltage is
 directly proportional to the charge generated in the detector through the well
 know formula\autocite{Knoll:RadMeasurement}
 \begin{equation}
@@ -164,6 +170,35 @@ analyzer (MCA) that was connected to a computer to record the data.
   \includegraphics[width=.5\linewidth]{experimental_setup}
   \caption{Schema of the experimental setup}
   \label{fig:exp_setup}
+\end{figure}
+
+\subsection{Calibration}
+\label{sec:calibration}
+In order to calibrate the detector the pulse generator was used to injected in
+the pre-amplifier a known pulse. The oscilloscope was used to read the pulse
+voltage that multiplied by the pre-amplifier capacitance gives the collected
+charge as described in Section~\ref{sec:meas-appar}. The distribution on the MCA
+was fitted with a Gaussian using the data taking software, the mean value is
+then associated to a charge and the standard deviation used as uncertainty. This
+procedure was performed for a set of input voltages and, due to time
+restrictions, only for a gain value of 100. Figure~\ref{fig:calibration_fit}
+shows the calculated collected charge as a function of the MCA channel number
+with a linear fit superimposed. Figure~\ref{fig:calibration_raw} shows the
+counts as a function of the MCA channel number.
+\begin{figure}[!h]
+  \centering
+  \begin{subfigure}[t]{.48\linewidth}
+    \includegraphics[width=\linewidth]{calibration_fit}
+    \caption{Collected charge as a function of the multi-channel number}
+    \label{fig:calibration_fit}
+  \end{subfigure}
+  \begin{subfigure}[t]{.48\linewidth}
+    \includegraphics[width=\linewidth]{calibration_raw}
+    \caption{Counts as a function of the multi-channel number}
+    \label{fig:calibration_raw}
+  \end{subfigure}
+  \caption{}
+  \label{fig:calibration}
 \end{figure}
 %%% Local Variables:
 %%% mode: latex
