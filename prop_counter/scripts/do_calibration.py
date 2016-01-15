@@ -145,29 +145,41 @@ def main():
     resolution_gain10 = [19./118, 23./140, 25./160, 29./177]
     charge_gain10 = [4.47706528*10, 5.27477431*10, 6.07248333*10, 6.71824778*10]
 
-    # plt.plot(voltage_gain10, charge_gain10, 'bs', label='Gain 10')
-    # plt.plot(voltage_gain20, charge_gain20, 'g^', label='Gain 20')
-    # plt.plot(voltage_gain50, charge_gain50, 'ro', label='Gain 50')
-    # plt.plot(voltage_gain100, charge_gain100, '*', label='Gain 100')
-    # plt.plot(voltage_gain200, charge_gain200, 'yv', label='Gain 200')
+    error_gain200 = [0.6, 0.7, 0.9, 1.2, 1.3, 1.5]
+    error_gain100 = [1.6]
+    error_gain50 = [1.8, 1.7, 1.9, 2.1, 3.1]
+    error_gain20 = [3.2, 4.12, 4.4, 5.6, 7.3]
+    error_gain10 = [10.2, 13.8, 15.2, 17.3]
 
-    # plt.xlabel('Voltage [V]')
-    # plt.ylabel('Collected charge [pC]')
+    plt.errorbar(voltage_gain10, charge_gain10, yerr=error_gain10, ls='')
+    plt.errorbar(voltage_gain20, charge_gain20, yerr=error_gain20, ls='')
+    plt.errorbar(voltage_gain50, charge_gain50, yerr=error_gain50, ls='')
+    plt.errorbar(voltage_gain100, charge_gain100, yerr=error_gain100, ls='')
+    plt.errorbar(voltage_gain200, charge_gain200, yerr=error_gain200, ls='')
 
-    # plt.legend(loc=2)
-    # plt.savefig('charge_vs_voltage.pdf')
-
-    plt.plot(voltage_gain10, resolution_gain10, 'bs', label='Gain 10')
-    plt.plot(voltage_gain20, resolution_gain20, 'g^', label='Gain 20')
-    plt.plot(voltage_gain50, resolution_gain50, 'ro', label='Gain 50')
-    plt.plot(voltage_gain100, resolution_gain100, '*', label='Gain 100')
-    plt.plot(voltage_gain200, resolution_gain200, 'yv', label='Gain 200')
+    plt.plot(voltage_gain10, charge_gain10, 'bs', label='Gain 10')
+    plt.plot(voltage_gain20, charge_gain20, 'g^', label='Gain 20')
+    plt.plot(voltage_gain50, charge_gain50, 'ro', label='Gain 50')
+    plt.plot(voltage_gain100, charge_gain100, '*', label='Gain 100')
+    plt.plot(voltage_gain200, charge_gain200, 'yv', label='Gain 200')
 
     plt.xlabel('Voltage [V]')
-    plt.ylabel('Resolution')
+    plt.ylabel('Collected charge [pC]')
 
     plt.legend(loc=2)
-    plt.savefig('resolution_vs_voltage.pdf')
+    plt.savefig('charge_vs_voltage.pdf')
+
+    # plt.plot(voltage_gain10, resolution_gain10, 'bs', label='Gain 10')
+    # plt.plot(voltage_gain20, resolution_gain20, 'g^', label='Gain 20')
+    # plt.plot(voltage_gain50, resolution_gain50, 'ro', label='Gain 50')
+    # plt.plot(voltage_gain100, resolution_gain100, '*', label='Gain 100')
+    # plt.plot(voltage_gain200, resolution_gain200, 'yv', label='Gain 200')
+
+    # plt.xlabel('Voltage [V]')
+    # plt.ylabel('Resolution')
+
+    # plt.legend(loc=2)
+    # plt.savefig('resolution_vs_voltage.pdf')
 
     # plt.show()
 
